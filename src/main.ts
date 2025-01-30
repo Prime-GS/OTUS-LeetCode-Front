@@ -13,9 +13,10 @@ import "bootstrap";
 const pinia = createPinia();
 
 router.beforeEach(to => {
-  const store = useAuthStore();
+  const authStore = useAuthStore();
 
-  if (to.meta.requiresAuth && !store.isLoggendIn) return "/auth/login";
+  authStore.loadFromStorage;
+  if (to.meta.requiresAuth && !authStore.isLoggendIn) return "/auth/login";
 });
 
 createApp({

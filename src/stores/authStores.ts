@@ -15,6 +15,8 @@ export const useAuthStore = defineStore("auth", {
   },
   actions: {
     hasAnyRole(roles: string[]): boolean {
+      console.log(this.user);
+
       if (!this.user?.roles) {
         return false;
       }
@@ -80,6 +82,8 @@ export const useAuthStore = defineStore("auth", {
           client
             .query({ query: ME })
             .then(response => {
+              console.log("RESPONSE", response);
+
               this.setUser(response.data.me);
             })
             .finally(() => {
@@ -97,4 +101,5 @@ export const useAuthStore = defineStore("auth", {
       window.localStorage.setItem("@auth", JSON.stringify(data));
     },
   },
+  
 });

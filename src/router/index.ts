@@ -11,19 +11,19 @@ const router = createRouter({
     },
     {
       path: "/explore",
-      name: "Каталог",
-      component: () => import("../views/HomeView.vue"),
+      name: "Задания",
+      component: () => import("../views/TasksView.vue"),
     },
-    {
-      path: "/problems",
-      name: "Проблемы",
-      component: () => import("../views/HomeView.vue"),
-    },
-    {
-      path: "/discuss",
-      name: "Обсуждения",
-      component: () => import("../views/HomeView.vue"),
-    },
+    // {
+    //   path: "/problems",
+    //   name: "Проблемы",
+    //   component: () => import("../views/HomeView.vue"),
+    // },
+    // {
+    //   path: "/discuss",
+    //   name: "Обсуждения",
+    //   component: () => import("../views/HomeView.vue"),
+    // },
     {
       path: "/admin",
       name: "Обсуждения",

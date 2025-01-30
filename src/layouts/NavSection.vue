@@ -16,8 +16,12 @@ import { navItems } from "./navItems";
       </HasRolesContent>
     </ul>
     <ul class="navbar-nav mb-2 mb-lg-0">
-      <li class="nav_item"><RouterLink to="/auth/login" class="nav-link">Вход</RouterLink></li>
-      <li class="nav_item"><RouterLink to="/auth/registration" class="nav-link">Регистрация</RouterLink></li>
+      <li class="nav_item">
+        <RouterLink to="/auth/login" class="nav-link">Вход</RouterLink>
+      </li>
+      <li class="nav_item">
+        <RouterLink to="/auth/registration" class="nav-link">Регистрация</RouterLink>
+      </li>
     </ul>
   </div>
   <div class="nav_container"></div>

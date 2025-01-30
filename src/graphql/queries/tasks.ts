@@ -1,4 +1,5 @@
 import gql from "graphql-tag";
+import { TAG_FRAGMENT } from "./tags";
 
 export const TASK_FRAGMENT = gql`
   fragment TaskFragment on Task {
@@ -7,11 +8,14 @@ export const TASK_FRAGMENT = gql`
     description
     difficulty
     result
-    input 
-    tags
+    input
+    tags {
+      ...TagFragment
+    }
     createdAt
     updatedAt
   }
+  ${TAG_FRAGMENT}
 `;
 
 export const GET_TASKS = gql`

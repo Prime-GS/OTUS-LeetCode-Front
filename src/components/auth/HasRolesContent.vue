@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useAuthStore } from "../../stores/authStores";
 
-const props = defineProps({ roles: Array<string>, className: String });
+const props = defineProps<{ roles?: string[]; className?: string }>();
 
 const authStore = useAuthStore();
 const isUserHasRoles = authStore.hasAnyRole(props.roles ?? []);
